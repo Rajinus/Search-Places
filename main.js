@@ -160,7 +160,7 @@ const searchInput = document.querySelector('.search-input');
 form.addEventListener('keyup', () => {
   const inputValue = searchInput.value;
   filteredresult = main.filter((item) => {
-    return item.title.toLowerCase().includes(inputValue),
+    return item.title.toLowerCase().includes(inputValue) ||
     item.country.toLowerCase().includes(inputValue);
   });
   displayItem();
